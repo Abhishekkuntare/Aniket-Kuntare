@@ -67,29 +67,38 @@ export function Contact() {
           </div>
 
           {/* CTA Section */}
-          <div className="border-2 border-accent p-12 md:p-16 text-center bg-secondary/50">
-            <h3 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-6">
-              Interested in working<br />together?
-            </h3>
-            <p className="text-foreground/80 text-lg mb-10 max-w-2xl mx-auto font-sans">
-              I&apos;m open to cybersecurity consulting, penetration testing engagements, and IT infrastructure projects. Let&apos;s create something secure together.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="mailto:aniketkuntare890@gmail.com"
-                className="inline-block px-12 py-4 bg-accent text-accent-foreground font-semibold uppercase tracking-widest text-sm hover:opacity-90 transition-all border border-accent"
-              >
-                Send Email
-              </a>
-              <a 
-                href="/AniketKuntareResume.pdf"
-                download="AniketKuntareResume.pdf"
-                className="inline-block px-12 py-4 border-2 border-accent text-accent font-semibold uppercase tracking-widest text-sm hover:bg-accent hover:text-accent-foreground transition-all"
-              >
-                Download Resume
-              </a>
-            </div>
-          </div>
+     <div className="border-2 border-accent p-12 md:p-16 text-center bg-secondary/50">
+  <h3 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-6">
+    Interested in working
+    <br />
+    together?
+  </h3>
+
+  <p className="text-foreground/80 text-lg mb-10 max-w-2xl mx-auto font-sans">
+    I&apos;m open to cybersecurity consulting, penetration testing engagements,
+    and IT infrastructure projects. Let&apos;s create something secure together.
+  </p>
+
+  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+    {/* Email Button */}
+    <a
+      href="mailto:aniketkuntare890@gmail.com"
+      className="inline-flex items-center justify-center px-12 py-4 bg-accent text-accent-foreground font-semibold uppercase tracking-widest text-sm hover:opacity-90 transition-all border border-accent rounded-md"
+    >
+      Send Email
+    </a>
+
+    {/* Resume Button */}
+    <a
+      href="/AniketKuntareResume.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center justify-center px-12 py-4 border-2 border-accent text-accent font-semibold uppercase tracking-widest text-sm hover:bg-accent hover:text-accent-foreground transition-all rounded-md"
+    >
+      View Resume
+    </a>
+  </div>
+</div>
         </div>
       </div>
     </section>

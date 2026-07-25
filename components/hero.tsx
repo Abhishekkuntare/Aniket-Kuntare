@@ -10,7 +10,7 @@ export function Hero() {
       <div className="absolute top-0 left-0 w-px h-full bg-accent/10"></div>
       <div className="absolute top-0 right-0 w-px h-full bg-accent/10"></div>
       
-      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-screen px-4 sm:px-6 lg:px-8 py-20">
+     <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center min-h-screen px-6 md:px-10 lg:px-16 py-16">
         {/* Left Content */}
         <motion.div
           className="space-y-12"
@@ -89,13 +89,13 @@ export function Hero() {
 
         {/* Right - 3D Character */}
         <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="hidden lg:block"
-        >
-          <Character3D />
-        </motion.div>
+  initial={{ opacity: 0, x: 50 }}
+  animate={{ opacity: 1, x: 0 }}
+  transition={{ duration: 0.8, delay: 0.2 }}
+  className="flex justify-center items-center w-full"
+>
+  <Character3D />
+</motion.div>
       </div>
 
       {/* Scroll Indicator */}

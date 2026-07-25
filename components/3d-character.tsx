@@ -10,6 +10,9 @@ export function Character3D() {
   const [rotateY, setRotateY] = useState(0)
 
   useEffect(() => {
+    // Disable mouse tracking on mobile
+    if (window.innerWidth < 768) return
+
     const handleMouseMove = (e: MouseEvent) => {
       if (!containerRef.current) return
 
@@ -35,7 +38,18 @@ export function Character3D() {
   return (
     <div
       ref={containerRef}
-      className="relative flex items-center justify-center w-full min-h-[500px] md:min-h-[650px]"
+      className="
+        relative
+        flex
+        items-center
+        justify-center
+        w-full
+        min-h-[350px]
+        sm:min-h-[450px]
+        md:min-h-[650px]
+        overflow-visible
+        px-4
+      "
     >
       <motion.div
         style={{
@@ -51,60 +65,80 @@ export function Character3D() {
           damping: 20,
         }}
       >
-   <motion.div
-  className="relative"
-  initial={{ opacity: 0, scale: 0.9 }}
-  animate={{
-    opacity: 1,
-    scale: 1,
-    y: [0, -8, 0],
-  }}
-  transition={{
-    opacity: { duration: 0.8 },
-    scale: { duration: 0.8 },
-    y: {
-      duration: 4,
-      repeat: Infinity,
-      ease: "easeInOut",
-    },
-  }}
->
-  {/* Soft Shadow */}
-  <div className="absolute inset-0 rounded-full bg-black/20 blur-3xl scale-90" />
+        <motion.div
+          className="relative flex items-center justify-center"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{
+            opacity: 1,
+            scale: 1,
+            y: [0, -10, 0],
+          }}
+          transition={{
+            opacity: {
+              duration: 0.8,
+            },
+            scale: {
+              duration: 0.8,
+            },
+            y: {
+              duration: 4,
+              repeat: Infinity,
+              ease: 'easeInOut',
+            },
+          }}
+        >
+          {/* Shadow */}
+          <div
+            className="
+              absolute
+              w-52 h-52
+              sm:w-64 sm:h-64
+              md:w-80 md:h-80
+              rounded-full
+              bg-black/20
+              blur-3xl
+              scale-110
+            "
+          />
 
-  {/* Profile Image */}
-  <div
-    className="
-      relative
-      w-80 h-80
-      md:w-[430px] md:h-[430px]
-      rounded-full
-      overflow-hidden
-      shadow-2xl
-    "
-  >
-    <img
-      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20Jul%2024%2C%202026%2C%2009_03_10%20PM-uWZJmnfM5Dd8vhVkbzXOPz6gzHcaxn.png"
-      alt="Aniket Kuntare"
-      className="w-full h-full object-cover"
-      draggable={false}
-    />
+          {/* Image */}
+          <div
+            className="
+              relative
+              w-60 h-60
+              sm:w-72 sm:h-72
+              md:w-[430px] md:h-[430px]
+              lg:w-[480px] lg:h-[480px]
+              rounded-full
+              overflow-hidden
+              shadow-[0_20px_60px_rgba(0,0,0,0.35)]
+              border-4
+              border-white/10
+              z-10
+            "
+          >
+            <img
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20Jul%2024%2C%202026%2C%2009_03_10%20PM-uWZJmnfM5Dd8vhVkbzXOPz6gzHcaxn.png"
+              alt="Aniket Kuntare"
+              className="w-full h-full object-cover select-none"
+              draggable={false}
+            />
 
-    {/* Static Shine */}
-    <div
-      className="
-        absolute
-        top-0
-        left-8
-        h-full
-        w-16
-        rotate-12
-        bg-white/10
-        blur-xl
-      "
-    />
-  </div>
-</motion.div>
+            {/* Shine */}
+            <div
+              className="
+                absolute
+                top-0
+                left-8
+                h-full
+                w-16
+                rotate-12
+                bg-white/10
+                blur-xl
+              "
+            />
+          </div>
+        </motion.div>
       </motion.div>
     </div>
   )
