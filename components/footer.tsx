@@ -36,7 +36,7 @@ export function Footer() {
               Connect
             </h4>
             <div className="flex gap-4">
-              <a href="https://www.linkedin.com/in/aniket-kuntare/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 border border-accent/50 flex items-center justify-center hover:bg-accent hover:text-background transition-all duration-300 font-sans font-bold">
+              <a href="https://www.linkedin.com/in/aniket-kuntare-/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 border border-accent/50 flex items-center justify-center hover:bg-accent hover:text-background transition-all duration-300 font-sans font-bold">
                 in
               </a>
               <a href="mailto:aniketkuntare890@gmail.com" className="w-10 h-10 border border-accent/50 flex items-center justify-center hover:bg-accent hover:text-background transition-all duration-300 font-sans font-bold">
