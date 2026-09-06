@@ -2,7 +2,7 @@
 
 ## 🚀 Cyber Security | System Support Engineer | Windows Server Administrator
 
-Passionate IT professional with **2+ years of experience** in **System Support, Desktop Support, Windows Server Administration, Networking, Cloud Computing, and Cyber Security**. Experienced in managing enterprise IT infrastructure, troubleshooting complex technical issues, and ensuring secure, reliable systems.
+Passionate IT professional with **3+ years of experience** in **System Support, Desktop Support, Windows Server Administration, Networking, Cloud Computing, and Cyber Security**. Experienced in managing enterprise IT infrastructure, troubleshooting complex technical issues, and ensuring secure, reliable systems.
 
 I enjoy solving real-world IT challenges, learning new technologies, and continuously improving my cybersecurity and infrastructure management skills.
 
